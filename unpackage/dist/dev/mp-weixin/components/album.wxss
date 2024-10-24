@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.recom.data-v-c6a78a78 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.recom .zj.data-v-c6a78a78 {
+  margin-bottom: 30rpx;
+}
+.recom .zj .imgSpan.data-v-c6a78a78 {
+  position: relative;
+}
+.recom .zj .imgSpan .img.data-v-c6a78a78 {
+  display: block;
+  width: 100%;
+}
+.recom .zj .imgSpan .icon.data-v-c6a78a78 {
+  position: absolute;
+  z-index: 1;
+  right: 10rpx;
+  bottom: 10rpx;
+  width: 40rpx;
+  opacity: .9;
+}
+.recom .zj .imgSpan .listenCount.data-v-c6a78a78 {
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20rpx;
+}
+.recom .zj .imgSpan .listenCount image.data-v-c6a78a78 {
+  width: 28rpx;
+  height: 32rpx;
+  margin-right: 6rpx;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.recom .name.data-v-c6a78a78,
+.recom .author.data-v-c6a78a78 {
+  padding: 0 6rpx;
+  font-size: 26rpx;
+}
+.recom .author.data-v-c6a78a78 {
+  color: #999999;
+}
+

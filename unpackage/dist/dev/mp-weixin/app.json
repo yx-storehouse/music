@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/info/info",
+    "pages/new/new",
+    "components/top"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#00c273",
+    "backgroundColor": "#00c273"
+  },
+  "usingComponents": {}
+}

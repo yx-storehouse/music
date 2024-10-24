@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.title.data-v-eab7c80e {
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+.title image.data-v-eab7c80e {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 40rpx;
+  display: block;
+}
+.change.data-v-eab7c80e {
+  width: 28%;
+  line-height: 56rpx;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+  border: solid 1rpx #CCCCCC;
+}
+.change image.data-v-eab7c80e {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 32rpx;
+  height: 32rpx;
+}
+
