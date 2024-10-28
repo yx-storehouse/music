@@ -1477,7 +1477,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8834,7 +8834,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8855,14 +8855,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -8958,7 +8958,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"music","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9376,9 +9376,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 25 */
-/*!*********************************!*\
-  !*** D:/frame/music/pages.json ***!
-  \*********************************/
+/*!*******************************!*\
+  !*** D:/duo/music/pages.json ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9518,7 +9518,65 @@ function normalizeComponent (
 
 
 /***/ }),
-/* 32 */,
+/* 32 */
+/*!***************************************!*\
+  !*** D:/duo/music/publicjs/common.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var PubFn = {
+  // 播放量格式化函数  
+  // 如果人数超过 10000，保留小数点后一位并显示 '万'  
+  // 如果不超过，则显示原数  
+  peoNum: function peoNum(count) {
+    // 将 count 转换为数字  
+    var peoCount = Number(count);
+    // 检查 peoCount 是否为有效数字  
+    if (!isNaN(peoCount)) {
+      // 如果 peoCount 大于 10000  
+      if (peoCount > 10000) {
+        // 除以 10000，保留一位小数，并添加 '万'  
+        return (peoCount / 10000).toFixed(1) + '万';
+      } else {
+        // 如果小于 10000，返回原数  
+        return peoCount;
+      }
+    } else {
+      return 0;
+    }
+  },
+  // 秒格式化函数，将秒数格式化为 00:00 的格式  
+  secondFormat: function secondFormat(second) {
+    // 计算秒数的余数  
+    var sec = second % 60;
+    // 计算分钟数  
+    var min = Math.floor(second / 60);
+    // 如果分钟数小于两位，前面补充 '0'  
+    if (min.toString().length < 2) {
+      min = '0' + min;
+    }
+    // 如果秒数小于两位，前面补充 '0'  
+    if (sec.toString().length < 2) {
+      sec = '0' + sec;
+    }
+    // 返回 mm:ss 格式  
+    return min + ':' + sec;
+  }
+};
+
+// 导出 PubFn 对象,保证从外部可以访问到 PubFn 对象里面的方法  
+var _default = PubFn;
+exports.default = _default;
+
+/***/ }),
 /* 33 */,
 /* 34 */,
 /* 35 */,
@@ -9531,10 +9589,11 @@ function normalizeComponent (
 /* 42 */,
 /* 43 */,
 /* 44 */,
-/* 45 */
-/*!***************************************!*\
-  !*** D:/frame/music/publicjs/mock.js ***!
-  \***************************************/
+/* 45 */,
+/* 46 */
+/*!*************************************!*\
+  !*** D:/duo/music/publicjs/mock.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9906,95 +9965,6 @@ var newFilmsList = [{
   updateTime: "刚刚更新"
 }];
 exports.newFilmsList = newFilmsList;
-
-/***/ }),
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */
-/*!*****************************************!*\
-  !*** D:/frame/music/publicjs/common.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var PubFn = {
-  // 播放量格式化函数  
-  // 如果人数超过 10000，保留小数点后一位并显示 '万'  
-  // 如果不超过，则显示原数  
-  peoNum: function peoNum(count) {
-    // 将 count 转换为数字  
-    var peoCount = Number(count);
-    // 检查 peoCount 是否为有效数字  
-    if (!isNaN(peoCount)) {
-      // 如果 peoCount 大于 10000  
-      if (peoCount > 10000) {
-        // 除以 10000，保留一位小数，并添加 '万'  
-        return (peoCount / 10000).toFixed(1) + '万';
-      } else {
-        // 如果小于 10000，返回原数  
-        return peoCount;
-      }
-    } else {
-      return 0;
-    }
-  },
-  // 秒格式化函数，将秒数格式化为 00:00 的格式  
-  secondFormat: function secondFormat(second) {
-    // 计算秒数的余数  
-    var sec = second % 60;
-    // 计算分钟数  
-    var min = Math.floor(second / 60);
-    // 如果分钟数小于两位，前面补充 '0'  
-    if (min.toString().length < 2) {
-      min = '0' + min;
-    }
-    // 如果秒数小于两位，前面补充 '0'  
-    if (sec.toString().length < 2) {
-      sec = '0' + sec;
-    }
-    // 返回 mm:ss 格式  
-    return min + ':' + sec;
-  }
-};
-
-// 导出 PubFn 对象,保证从外部可以访问到 PubFn 对象里面的方法  
-var _default = PubFn;
-exports.default = _default;
 
 /***/ })
 ]]);
