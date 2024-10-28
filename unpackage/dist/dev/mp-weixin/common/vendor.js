@@ -9376,9 +9376,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 25 */
-/*!*******************************!*\
-  !*** D:/duo/music/pages.json ***!
-  \*******************************/
+/*!*********************************!*\
+  !*** D:/frame/music/pages.json ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9519,9 +9519,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 32 */
-/*!***************************************!*\
-  !*** D:/duo/music/publicjs/common.js ***!
-  \***************************************/
+/*!*****************************************!*\
+  !*** D:/frame/music/publicjs/common.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9591,9 +9591,9 @@ exports.default = _default;
 /* 44 */,
 /* 45 */,
 /* 46 */
-/*!*************************************!*\
-  !*** D:/duo/music/publicjs/mock.js ***!
-  \*************************************/
+/*!***************************************!*\
+  !*** D:/frame/music/publicjs/mock.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
