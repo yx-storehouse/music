@@ -9745,11 +9745,6 @@ var audioList = [{
   src: 'http://cdnringbd.shoujiduoduo.com/ringres/userv1/a48/339/65390339.aac',
   img: '../../static/image/bg_img/bg24.jpg'
 }, {
-  name: '浪子回头',
-  author: '辉气*蛋',
-  src: 'http://cdnringbd.shoujiduoduo.com/ringres/userv1/a48/645/66725645.aac',
-  img: '../../static/image/bg_img/bg25.jpg'
-}, {
   name: '生僻字心动不已',
   author: '〃°ω°〃',
   src: 'http://cdnringbd.shoujiduoduo.com/ringres/userv1/a48/359/64750359.aac',
