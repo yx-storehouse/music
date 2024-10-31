@@ -72,6 +72,7 @@
 <script>  
 // 引入播放列表  
 import { audioList } from '../../publicjs/mock';  
+import PubFn from '@/publicjs/common.js';
 
 let innerAudioContext = "";  
 
@@ -174,12 +175,12 @@ export default {
         playWidth() {  
             return 'transform:translate3d(' + (this.nowmiao / this.allmiao) * this.lineBarWid + 'upx,0,0);';  
         },  
-        // nowmiaoForc() {  
-        //     return this.$PubFn.secondFormact(this.nowmiao);  
-        // },  
-        // allmiaoForc() {  
-        //     return this.$PubFn.secondFormact(this.allmiao);  
-        // },  
+        nowmiaoForc() {  
+            return this.$PubFn.secondFormat(this.nowmiao);  
+        },  
+        allmiaoForc() {  
+            return this.$PubFn.secondFormat(this.allmiao);  
+        },  
         bgStyle() {  
             return 'background-image:url(' + this.audioList[this.audioPlaySrc].img + ')';  
         },  

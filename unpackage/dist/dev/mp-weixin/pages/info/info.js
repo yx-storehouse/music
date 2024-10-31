@@ -137,11 +137,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 3);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 var _mock = __webpack_require__(/*! ../../publicjs/mock */ 46);
+var _common = _interopRequireDefault(__webpack_require__(/*! @/publicjs/common.js */ 32));
 //
 //
 //
@@ -316,12 +318,12 @@ var _default = {
     playWidth: function playWidth() {
       return 'transform:translate3d(' + this.nowmiao / this.allmiao * this.lineBarWid + 'upx,0,0);';
     },
-    // nowmiaoForc() {  
-    //     return this.$PubFn.secondFormact(this.nowmiao);  
-    // },  
-    // allmiaoForc() {  
-    //     return this.$PubFn.secondFormact(this.allmiao);  
-    // },  
+    nowmiaoForc: function nowmiaoForc() {
+      return this.$PubFn.secondFormat(this.nowmiao);
+    },
+    allmiaoForc: function allmiaoForc() {
+      return this.$PubFn.secondFormat(this.allmiao);
+    },
     bgStyle: function bgStyle() {
       return 'background-image:url(' + this.audioList[this.audioPlaySrc].img + ')';
     }
