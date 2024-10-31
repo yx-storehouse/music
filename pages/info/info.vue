@@ -72,7 +72,6 @@
 <script>  
 // 引入播放列表  
 import { audioList } from '../../publicjs/mock';  
-import PubFn from '@/publicjs/common.js';
 
 let innerAudioContext = "";  
 

@@ -137,13 +137,11 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 3);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 var _mock = __webpack_require__(/*! ../../publicjs/mock */ 46);
-var _common = _interopRequireDefault(__webpack_require__(/*! @/publicjs/common.js */ 32));
 //
 //
 //
