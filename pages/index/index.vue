@@ -7,7 +7,7 @@
 		</swiper>
 
 		<view class="content">
-			<!-- Navigation bar -->
+			
 			<view class="bar">
 				<view class="iconSpan" v-for="(val, index) in contentBar" :key="index">
 					<image :src="val.src" class="iconBarImg"></image>
