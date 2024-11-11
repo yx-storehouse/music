@@ -25,6 +25,15 @@
             "path" : "components/top",
             "style" : {}
         }
+        ,{
+            "path" : "pages/album/album",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
     "globalStyle" : {
         "navigationBarTextStyle" : "black",

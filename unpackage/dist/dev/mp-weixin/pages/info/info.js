@@ -230,6 +230,16 @@ var _default = {
       collect: 0
     };
   },
+  onLoad: function onLoad(options) {
+    var index = parseInt(options.index);
+    if (isNaN(index) || index < 0 || index >= this.audioList.length) {
+      console.error("无效的索引:", options.index);
+    } else {
+      this.audioPlaySrc = index;
+    }
+    console.log("接收到的索引:", this.audioPlaySrc);
+    this.audioInit();
+  },
   methods: {
     playFunc: function playFunc() {
       this.playState = 1;
@@ -285,6 +295,7 @@ var _default = {
           this.audioPlaySrc = 0;
         } else {
           this.audioPlaySrc += 1;
+          console.log(this.audioPlaySrc);
         }
       }
       this.audioInit();
@@ -327,7 +338,7 @@ var _default = {
     }
   },
   mounted: function mounted() {
-    this.audioPlaySrc = 0;
+    // this.audioPlaySrc = 0;
     this.audioInit();
   },
   beforeDestroy: function beforeDestroy() {

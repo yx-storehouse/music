@@ -189,7 +189,7 @@ var _mock = __webpack_require__(/*! ../../publicjs/mock.js */ 46);
 //
 var albumblock = function albumblock() {
   __webpack_require__.e(/*! require.ensure | components/albumblock */ "components/albumblock").then((function () {
-    return resolve(__webpack_require__(/*! ../../components/albumblock */ 64));
+    return resolve(__webpack_require__(/*! ../../components/albumblock */ 77));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

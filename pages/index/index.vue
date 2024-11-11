@@ -24,7 +24,7 @@
 				</view>
 				<view class="list">
 					<view class="grayColor info" v-for="(val, index) in content.list" :key="index"
-						@tap="goUrl('../new/new?count=' + index)">
+						@tap="goUrl('../album/album')">
 						<view class="name">{{ val.name }}</view>
 						<view class="disc">{{ val.disc }}</view>
 						<image :src="val.src" class="listImg"></image>
