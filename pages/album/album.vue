@@ -32,7 +32,7 @@
 				</uni-list>
 				<!-- 音乐列表 -->
 				<uni-list v-for="(track, index) in musicList" :key="index" class="track-item">
-					<uni-list-item @click="navigateToPlayPage(index)">
+					<uni-list-item @click="navigateToPlayPage(index)" link>
 						<template v-slot:header>
 							<view class="name-music">
 								<text class="track-title">{{ track.title }}</text>
