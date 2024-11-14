@@ -212,45 +212,37 @@ var _default = {
   data: function data() {
     return {
       musicList: [{
-        title: "像我这样的人1",
-        tags: ["独家", "VIP"],
-        description: "毛不易 - 平凡的一天哦i阿森纳拉的开发",
-        url: "https://example.com/music/track1.mp3"
+        "title": "你的微笑",
+        "tags": ["HQ", "独家"],
+        "description": "毛不易是一位充满情感的创作歌手，他在这首歌中表达了对生活中温暖瞬间的珍惜。"
       }, {
-        title: "像我这样的人2",
-        tags: ["SQ", "独家", "VIP"],
-        description: "毛不易 - 平凡的一天",
-        url: "https://example.com/music/track2.mp3"
+        "title": "明日之歌",
+        "tags": ["SQ", "VIP"],
+        "description": "毛不易以细腻的词汇和动人的旋律，描绘了对未来美好憧憬的心声。"
       }, {
-        title: "像我这样的人3",
-        tags: ["独家"],
-        description: "毛不易 - 平凡的一天",
-        url: "https://example.com/music/track3.mp3"
+        "title": "岁月的故事",
+        "tags": ["独家"],
+        "description": "毛不易的音乐常常触动人心，这首歌讲述了时间流逝带来的酸甜苦辣。"
       }, {
-        title: "像我这样的人4",
-        tags: ["VIP"],
-        description: "毛不易 - 平凡的一天",
-        url: "https://example.com/music/track4.mp3"
+        "title": "心中的梦想",
+        "tags": ["VIP", "SQ", "独家", "HQ"],
+        "description": "毛不易用这首歌呼唤着每个人对理想生活的追寻，不负当下的时光。"
       }, {
-        title: "像我这样的人5",
-        tags: ["SQ", "独家", "VIP"],
-        description: "毛不易 - 平凡的一天",
-        url: "https://example.com/music/track5.mp3"
+        "title": "塌陷的岁月",
+        "tags": ["SQ", "VIP"],
+        "description": "这首歌展现了毛不易对生活的深刻反思，充满了对过往的感慨与思考。"
       }, {
-        title: "像我这样的人6",
-        tags: ["HQ", "独家"],
-        description: "毛不易 - 平凡的一天",
-        url: "https://example.com/music/track6.mp3"
+        "title": "旧时光的回响",
+        "tags": ["HQ", "VIP"],
+        "description": "毛不易用温暖的旋律再现了那些年少轻狂时的故事，唤起每个人的美好回忆。"
       }, {
-        title: "像我这样的人7",
-        tags: ["HQ", "独家"],
-        description: "毛不易 - 平凡的一天",
-        url: "https://example.com/music/track7.mp3"
+        "title": "漂泊的心",
+        "tags": ["HQ", "独家"],
+        "description": "在这首歌中，毛不易讲述了一个关于寻根与归属的动人故事，令人深思。"
       }, {
-        title: "像我这样的人8",
-        tags: [],
-        description: "毛不易 - 平凡的一天",
-        url: "https://example.com/music/track8.mp3"
+        "title": "温柔的思念",
+        "tags": ["HQ", "独家"],
+        "description": "毛不易以其独特的嗓音，抚慰着每一个怀念往昔的人，这首歌温暖而动人。"
       }],
       nb: ['新歌', '新碟', '影视'],
       // 分类数据
