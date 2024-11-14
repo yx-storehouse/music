@@ -92,14 +92,12 @@
 		},
 		onLoad(options) {
 			const index = parseInt(options.index);
-			if (isNaN(index) || index < 0 || index >= this.audioList.length) {
-				console.error("无效的索引:", options.index);
-				
-			} else {
+			if (!isNaN(index) && index >= 0 && index < this.audioList.length) {
 				this.audioPlaySrc = index;
+			} else {
+				console.error("无效的索引:", options.index);
 			}
 			console.log("接收到的索引:", this.audioPlaySrc);
-			this.audioInit();
 		},
 
 		methods: {
@@ -199,9 +197,11 @@
 				return 'background-image:url(' + this.audioList[this.audioPlaySrc].img + ')';
 			},
 		},
-		mounted() {
-			// this.audioPlaySrc = 0;
+
+
+		mounted() {	
 			this.audioInit();
+			 innerAudioContext.play(); 
 		},
 		beforeDestroy() {
 			if (innerAudioContext) {

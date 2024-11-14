@@ -232,13 +232,12 @@ var _default = {
   },
   onLoad: function onLoad(options) {
     var index = parseInt(options.index);
-    if (isNaN(index) || index < 0 || index >= this.audioList.length) {
-      console.error("无效的索引:", options.index);
-    } else {
+    if (!isNaN(index) && index >= 0 && index < this.audioList.length) {
       this.audioPlaySrc = index;
+    } else {
+      console.error("无效的索引:", options.index);
     }
     console.log("接收到的索引:", this.audioPlaySrc);
-    this.audioInit();
   },
   methods: {
     playFunc: function playFunc() {
@@ -338,8 +337,8 @@ var _default = {
     }
   },
   mounted: function mounted() {
-    // this.audioPlaySrc = 0;
     this.audioInit();
+    innerAudioContext.play();
   },
   beforeDestroy: function beforeDestroy() {
     if (innerAudioContext) {

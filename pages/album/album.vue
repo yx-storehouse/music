@@ -129,7 +129,7 @@
 						url: "https://example.com/music/track8.mp3"
 					}
 				],
-				nb: ['新歌', '新鞋', '新报'], // 分类数据
+				nb: ['新歌', '新碟', '影视'], // 分类数据
 				activeIndex: 0, // 当前选中的分类项索引
 				recommend: recommend
 			};
