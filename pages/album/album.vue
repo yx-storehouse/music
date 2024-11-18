@@ -13,23 +13,17 @@
 		<!-- Swiper切换 -->
 		<swiper :indicator-dots="true" @change="change" :current="activeIndex">
 			<swiper-item class="s1">
-				<uni-list>
-					<uni-list-item class="bbox">
-						<template v-slot:header>
-
-							<img  class="play" src="../../static/image/icons/start_color.png" alt="">
-						</template>
-						<template v-slot:body>
-							<view class="play-all">全部播放</view>
-						</template>
-						<template v-slot:footer>
-							<view style="padding-left: 120px;">
-								<img class="play" src="../../static/image/icons/download_black.png" alt="">
-								<img class="play" src="../../static/image/icons/content_black.png" alt="">
-							</view>
-						</template>
-					</uni-list-item>
-				</uni-list>
+<view class="" style="display: flex; flex-direction: row; justify-content: space-between;">
+	<view class=""  style="display: flex; flex-direction: row;">
+		<img class="play" src="../../static/image/icons/start_color.png" alt="">
+		<view class="play-all">全部播放</view>
+	</view>
+	
+	<view >
+		<img class="play" src="../../static/image/icons/download_black.png" alt="">
+		<img class="play" src="../../static/image/icons/content_black.png" alt="">
+	</view>
+</view>
 				<!-- 音乐列表 -->
 				<uni-list v-for="(track, index) in musicList" :key="index" class="track-item">
 					<uni-list-item @click="navigateToPlayPage(index)" clickable>
@@ -53,6 +47,8 @@
 						</template>
 					</uni-list-item>
 				</uni-list>
+
+
 			</swiper-item>
 
 			<swiper-item>
@@ -80,49 +76,47 @@
 		},
 		data() {
 			return {
-				musicList:
-				 [  
-				     {  
-				         "title": "你的微笑",  
-				         "tags": ["HQ", "独家"],  
-				         "description": "毛不易是一位充满情感的创作歌手，他在这首歌中表达了对生活中温暖瞬间的珍惜。"  
-				     },  
-				     {  
-				         "title": "明日之歌",  
-				         "tags": ["SQ", "VIP"],  
-				         "description": "毛不易以细腻的词汇和动人的旋律，描绘了对未来美好憧憬的心声。"  
-				     },  
-				     {  
-				         "title": "岁月的故事",  
-				         "tags": ["独家"],  
-				         "description": "毛不易的音乐常常触动人心，这首歌讲述了时间流逝带来的酸甜苦辣。"  
-				     },  
-				     {  
-				         "title": "心中的梦想",  
-				         "tags": ["VIP","SQ","独家","HQ"],  
-				         "description": "毛不易用这首歌呼唤着每个人对理想生活的追寻，不负当下的时光。"  
-				     },  
-				     {  
-				         "title": "塌陷的岁月",  
-				         "tags": ["SQ", "VIP"],  
-				         "description": "这首歌展现了毛不易对生活的深刻反思，充满了对过往的感慨与思考。"  
-				     },  
-				     {  
-				         "title": "旧时光的回响",  
-				         "tags": ["HQ", "VIP"],  
-				         "description": "毛不易用温暖的旋律再现了那些年少轻狂时的故事，唤起每个人的美好回忆。"  
-				     },  
-				     {  
-				         "title": "漂泊的心",  
-				         "tags": ["HQ", "独家"],  
-				         "description": "在这首歌中，毛不易讲述了一个关于寻根与归属的动人故事，令人深思。"  
-				     },  
-				     {  
-				         "title": "温柔的思念",  
-				         "tags": ["HQ", "独家"],  
-				         "description": "毛不易以其独特的嗓音，抚慰着每一个怀念往昔的人，这首歌温暖而动人。"  
-				     }  
-				 ],
+				musicList: [{
+						"title": "你的微笑",
+						"tags": ["HQ", "独家"],
+						"description": "毛不易是一位充满情感的创作歌手，他在这首歌中表达了对生活中温暖瞬间的珍惜。"
+					},
+					{
+						"title": "明日之歌",
+						"tags": ["SQ", "VIP"],
+						"description": "毛不易以细腻的词汇和动人的旋律，描绘了对未来美好憧憬的心声。"
+					},
+				 {
+						"title": "岁月的故事",
+				 	"tags": ["独家"],
+						"description": "毛不易的音乐常常触动人心，这首歌讲述了时间流逝带来的酸甜苦辣。"
+					},
+					{
+						"title": "心中的梦想",
+						"tags": ["VIP", "SQ", "独家", "HQ"],
+						"description": "毛不易用这首歌呼唤着每个人对理想生活的追寻，不负当下的时光。"
+					},
+					{
+				 	"title": "塌陷的岁月",
+						"tags": ["SQ", "VIP"],
+						"description": "这首歌展现了毛不易对生活的深刻反思，充满了对过往的感慨与思考。"
+					},
+					{
+						"title": "旧时光的回响",
+						"tags": ["HQ", "VIP"],
+						"description": "毛不易用温暖的旋律再现了那些年少轻狂时的故事，唤起每个人的美好回忆。"
+					},
+					{
+						"title": "漂泊的心",
+						"tags": ["HQ", "独家"],
+						"description": "在这首歌中，毛不易讲述了一个关于寻根与归属的动人故事，令人深思。"
+					},
+					{
+						"title": "温柔的思念",
+						"tags": ["HQ", "独家"],
+						"description": "毛不易以其独特的嗓音，抚慰着每一个怀念往昔的人，这首歌温暖而动人。"
+					}
+				],
 				nb: ['新歌', '新碟', '影视'], // 分类数据
 				activeIndex: 0, // 当前选中的分类项索引
 				recommend: recommend
@@ -188,7 +182,7 @@
 
 
 	.play {
-		padding:10px;
+		padding: 10px;
 		width: 20px;
 		height: 20px;
 	}
