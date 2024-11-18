@@ -96,4 +96,9 @@ swiper {
 	padding: 5px 10px;
 	margin-right: 5px;
 }
+.scroll-Y {
+	    height: calc(100vh - 150px);
+	    overflow-y: auto;
+}
+
 

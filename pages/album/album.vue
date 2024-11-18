@@ -13,41 +13,43 @@
 		<!-- Swiper切换 -->
 		<swiper :indicator-dots="true" @change="change" :current="activeIndex">
 			<swiper-item class="s1">
-<view class="" style="display: flex; flex-direction: row; justify-content: space-between;">
-	<view class=""  style="display: flex; flex-direction: row;">
-		<img class="play" src="../../static/image/icons/start_color.png" alt="">
-		<view class="play-all">全部播放</view>
-	</view>
-	
-	<view >
-		<img class="play" src="../../static/image/icons/download_black.png" alt="">
-		<img class="play" src="../../static/image/icons/content_black.png" alt="">
-	</view>
-</view>
-				<!-- 音乐列表 -->
-				<uni-list v-for="(track, index) in musicList" :key="index" class="track-item">
-					<uni-list-item @click="navigateToPlayPage(index)" clickable>
-						<template v-slot:header>
-							<view class="name-music">
-								<text class="track-title">{{ track.title }}</text>
-							</view>
-							<view class="nb">
-								<text class="tag-ye" v-if="track.tags.includes('SQ')">SQ</text>
-								<text class="tag-ye" v-if="track.tags.includes('VIP')">VIP</text>
-								<text class="tag-red" v-if="track.tags.includes('HQ')">HQ</text>
-								<text class="tag-red" v-if="track.tags.includes('独家')">独家</text>
-								{{ track.description }}
-							</view>
-						</template>
-						<template v-slot:footer>
-							<view class="right">
-								<img class="right-icon" src="../../static/image/icons/play_audio.png" alt="">
-								<img class="right-icon" src="../../static/image/icons/more.png" alt="">
-							</view>
-						</template>
-					</uni-list-item>
-				</uni-list>
+				<view class="" style="display: flex; flex-direction: row; justify-content: space-between;">
+					<view class="" style="display: flex; flex-direction: row;">
+						<img class="play" src="../../static/image/icons/start_color.png" alt="">
+						<view class="play-all">全部播放</view>
+					</view>
 
+					<view>
+						<img class="play" src="../../static/image/icons/download_black.png" alt="">
+						<img class="play" src="../../static/image/icons/content_black.png" alt="">
+					</view>
+				</view>
+				<!-- 音乐列表 -->
+				<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y" @scrolltoupper="upper"
+					@scrolltolower="lower" @scroll="scroll">
+					<uni-list v-for="(track, index) in musicList" :key="index" class="track-item">
+						<uni-list-item @click="navigateToPlayPage(index)" clickable>
+							<template v-slot:header>
+								<view class="name-music">
+									<text class="track-title">{{ track.title }}</text>
+								</view>
+								<view class="nb">
+									<text class="tag-ye" v-if="track.tags.includes('SQ')">SQ</text>
+									<text class="tag-ye" v-if="track.tags.includes('VIP')">VIP</text>
+									<text class="tag-red" v-if="track.tags.includes('HQ')">HQ</text>
+									<text class="tag-red" v-if="track.tags.includes('独家')">独家</text>
+									{{ track.description }}
+								</view>
+							</template>
+							<template v-slot:footer>
+								<view class="right">
+									<img class="right-icon" src="../../static/image/icons/play_audio.png" alt="">
+									<img class="right-icon" src="../../static/image/icons/more.png" alt="">
+								</view>
+							</template>
+						</uni-list-item>
+					</uni-list>
+				</scroll-view>
 
 			</swiper-item>
 
@@ -86,9 +88,9 @@
 						"tags": ["SQ", "VIP"],
 						"description": "毛不易以细腻的词汇和动人的旋律，描绘了对未来美好憧憬的心声。"
 					},
-				 {
+					{
 						"title": "岁月的故事",
-				 	"tags": ["独家"],
+						"tags": ["独家"],
 						"description": "毛不易的音乐常常触动人心，这首歌讲述了时间流逝带来的酸甜苦辣。"
 					},
 					{
@@ -97,7 +99,7 @@
 						"description": "毛不易用这首歌呼唤着每个人对理想生活的追寻，不负当下的时光。"
 					},
 					{
-				 	"title": "塌陷的岁月",
+						"title": "塌陷的岁月",
 						"tags": ["SQ", "VIP"],
 						"description": "这首歌展现了毛不易对生活的深刻反思，充满了对过往的感慨与思考。"
 					},
@@ -262,4 +264,9 @@
 		padding: 5px 10px;
 		margin-right: 5px;
 	}
+		.scroll-Y {
+		    height: calc(100vh - 150px);
+		    overflow-y: auto;
+		}
+
 </style>
