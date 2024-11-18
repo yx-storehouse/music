@@ -9376,9 +9376,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 25 */
-/*!*********************************!*\
-  !*** D:/frame/music/pages.json ***!
-  \*********************************/
+/*!*******************************!*\
+  !*** D:/duo/music/pages.json ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9519,9 +9519,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 32 */
-/*!*****************************************!*\
-  !*** D:/frame/music/publicjs/common.js ***!
-  \*****************************************/
+/*!***************************************!*\
+  !*** D:/duo/music/publicjs/common.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9591,9 +9591,9 @@ exports.default = _default;
 /* 44 */,
 /* 45 */,
 /* 46 */
-/*!***************************************!*\
-  !*** D:/frame/music/publicjs/mock.js ***!
-  \***************************************/
+/*!*************************************!*\
+  !*** D:/duo/music/publicjs/mock.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9984,9 +9984,9 @@ exports.newFilmsList = newFilmsList;
 /* 66 */,
 /* 67 */,
 /* 68 */
-/*!*********************************************************!*\
-  !*** D:/frame/music/static/image/icons/start_color.png ***!
-  \*********************************************************/
+/*!*******************************************************!*\
+  !*** D:/duo/music/static/image/icons/start_color.png ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9994,9 +9994,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 /* 69 */
-/*!************************************************************!*\
-  !*** D:/frame/music/static/image/icons/download_black.png ***!
-  \************************************************************/
+/*!**********************************************************!*\
+  !*** D:/duo/music/static/image/icons/download_black.png ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10004,9 +10004,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADICAYAAACH
 
 /***/ }),
 /* 70 */
-/*!***********************************************************!*\
-  !*** D:/frame/music/static/image/icons/content_black.png ***!
-  \***********************************************************/
+/*!*********************************************************!*\
+  !*** D:/duo/music/static/image/icons/content_black.png ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10014,9 +10014,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 /* 71 */
-/*!********************************************************!*\
-  !*** D:/frame/music/static/image/icons/play_audio.png ***!
-  \********************************************************/
+/*!******************************************************!*\
+  !*** D:/duo/music/static/image/icons/play_audio.png ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10024,9 +10024,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 /* 72 */
-/*!**************************************************!*\
-  !*** D:/frame/music/static/image/icons/more.png ***!
-  \**************************************************/
+/*!************************************************!*\
+  !*** D:/duo/music/static/image/icons/more.png ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10078,9 +10078,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 /* 115 */,
 /* 116 */,
 /* 117 */
-/*!**************************************************************************************!*\
-  !*** D:/frame/music/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
-  \**************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/duo/music/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
